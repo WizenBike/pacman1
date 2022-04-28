@@ -14,6 +14,7 @@ public class MenuMovement : MonoBehaviour
     public Transform oranzovy;
     public Transform ruzovy;
     public Transform modry;
+    public Transform god;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +50,19 @@ public class MenuMovement : MonoBehaviour
             yield return new WaitForSeconds(delay);
             pacman.GetComponent<SpriteRenderer>().flipX = true;
             pacman.DOMove(new Vector2(xStart, pacman.position.y), time).SetEase(Ease.Linear);
+            yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xStart, cerveny.position.y), time).SetEase(Ease.Linear);
+            yield return new WaitForSeconds(time);
+
+            //tam
+            god.DOMove(new Vector2(xEnd, god.position.y), time).SetEase(Ease.Linear);
+            yield return new WaitForSeconds(delay);
+            pacman.DOMove(new Vector2(xEnd, pacman.position.y), time).SetEase(Ease.Linear);
+            yield return new WaitForSeconds(time);
+            //s5
+            god.DOMove(new Vector2(xStart, god.position.y), time).SetEase(Ease.Linear);
+            yield return new WaitForSeconds(delay);
+            pacman.DOMove(new Vector2(xStart, pacman.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(time);
 
         }
