@@ -62,7 +62,9 @@ public class MenuMovement : MonoBehaviour
             //s5
             god.DOMove(new Vector2(xStart, god.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
+            god.GetComponent<SpriteRenderer>().flipX = true;
             pacman.DOMove(new Vector2(xStart, pacman.position.y), time).SetEase(Ease.Linear);
+            pacman.GetComponent<SpriteRenderer>().flipX = true;
             yield return new WaitForSeconds(time);
 
         }
