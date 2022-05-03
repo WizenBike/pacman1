@@ -80,7 +80,15 @@ public class EnemyControler : MonoBehaviour
            
             
         };
-        
+        if (startNode != null )
+        {
+            print("CURENT NODEEEEEEE");
+
+           
+            mc.currentNode = startNode;
+
+        }
+
     }
 
 
