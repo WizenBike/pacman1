@@ -1299,7 +1299,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a985c763f7a49784088f4af92b611cbd,
+      objectReference: {fileID: 21300000, guid: d01aaff7e7a18e34598436b2eabd5074,
         type: 3}
     - target: {fileID: 1988858159450531476, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
@@ -1325,7 +1325,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a562b9e36432edd47bcc237f674e449c,
+      objectReference: {fileID: 21300000, guid: 18380c1aff1dc1d4aa7c27ef12a4f482,
         type: 3}
     - target: {fileID: 7652798700637569961, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
@@ -1335,12 +1335,12 @@ PrefabInstance:
     - target: {fileID: 7652798700637569961, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.4736878
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7652798700637569961, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.4660377
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1392021812, guid: b070a1416007b8a47bdf661b87430ea9, type: 3}
@@ -1373,7 +1373,7 @@ Animator:
   m_GameObject: {fileID: 443332827}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 58acd50e6e7cd894a96c864a2c0efcc7, type: 2}
+  m_Controller: {fileID: 9100000, guid: e45b0c530e0fbb8478b2cfdb7bcf5562, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1406,7 +1406,7 @@ MonoBehaviour:
   homePod: {fileID: 79035410}
   eyes: {fileID: 443332829}
   body: {fileID: 443332828}
-  startNode: {fileID: 0}
+  startNode: {fileID: 1714692315}
   redNode: {fileID: 756983352}
   gainSpeedOnDeath: 3
   scoreOnCatch: 400
@@ -2868,7 +2868,7 @@ MonoBehaviour:
   homePod: {fileID: 0}
   eyes: {fileID: 1733311231}
   body: {fileID: 969522726}
-  startNode: {fileID: 0}
+  startNode: {fileID: 1714692315}
   redNode: {fileID: 756983352}
   gainSpeedOnDeath: 3
   scoreOnCatch: 400
@@ -3450,12 +3450,12 @@ PrefabInstance:
     - target: {fileID: 77260366585936354, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.56
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 77260366585936354, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 77260366585936354, guid: b070a1416007b8a47bdf661b87430ea9,
         type: 3}
@@ -3566,7 +3566,7 @@ MonoBehaviour:
   homePod: {fileID: 1491103762}
   eyes: {fileID: 1503329165}
   body: {fileID: 1336096580}
-  startNode: {fileID: 0}
+  startNode: {fileID: 1714692315}
   redNode: {fileID: 756983352}
   gainSpeedOnDeath: 3
   scoreOnCatch: 400
@@ -14800,6 +14800,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e1bf42a9b61d649860d553afcb38a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1714692315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3616883967133566306, guid: 05e08d4216e3b5848a22b33eb30dbf22,
+    type: 3}
+  m_PrefabInstance: {fileID: 3616883967812279495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733311231 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4754873182298375240, guid: b070a1416007b8a47bdf661b87430ea9,
@@ -16184,8 +16190,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 290047941029082935, guid: 05e08d4216e3b5848a22b33eb30dbf22,
         type: 3}
+      propertyPath: unKillable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 290047941029082935, guid: 05e08d4216e3b5848a22b33eb30dbf22,
+        type: 3}
       propertyPath: unDestroyed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3616883967133566304, guid: 05e08d4216e3b5848a22b33eb30dbf22,
         type: 3}
@@ -16195,12 +16206,12 @@ PrefabInstance:
     - target: {fileID: 3616883967133566304, guid: 05e08d4216e3b5848a22b33eb30dbf22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.04
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 3616883967133566304, guid: 05e08d4216e3b5848a22b33eb30dbf22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.42
+      value: 3.47
       objectReference: {fileID: 0}
     - target: {fileID: 3616883967133566304, guid: 05e08d4216e3b5848a22b33eb30dbf22,
         type: 3}
@@ -16242,6 +16253,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3616883967133566305, guid: 05e08d4216e3b5848a22b33eb30dbf22,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3616883967133566306, guid: 05e08d4216e3b5848a22b33eb30dbf22,
         type: 3}
       propertyPath: m_Name
@@ -16251,6 +16267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: StartNode
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927478749614970092, guid: 05e08d4216e3b5848a22b33eb30dbf22,
+        type: 3}
+      propertyPath: startNode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05e08d4216e3b5848a22b33eb30dbf22, type: 3}
