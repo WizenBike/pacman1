@@ -41,8 +41,11 @@ public class EnemiRed : EnemyControler
         
         if (transform.position == redNode.transform.position)
         {
-            mc.speed /= gainSpeedOnDeath;
-            body.SetActive(true);
+            if (body.active != true)
+            {
+                mc.speed /= gainSpeedOnDeath;
+                body.SetActive(true);
+            }
             ghostState = GhostStates.goOutOfHome;
         }
     }

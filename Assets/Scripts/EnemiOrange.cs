@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiBlue : EnemyControler
+public class EnemiOrange : EnemyControler
 {
-    // Start is called before the first frame update
+    public int a;
     public GameObject Pointer;
-    public GameObject RedGhost;
+    // Start is called before the first frame update
+
+
+    // Update is called once per frame
 
     protected override void SwitchToScatter()
     {
@@ -31,24 +34,27 @@ public class EnemiBlue : EnemyControler
         }
 
     }
+
     protected override void goHome()
     {
 
         if (transform.position == startNode.transform.position)
         {
-
+            print("Leblebleble");
             mc.currentNode = redNode;
         }
 
-
         if (transform.position == redNode.transform.position)
+        {
+            mc.currentNode = pinkNode;
+        }
+        if (transform.position == pinkNode.transform.position)
         {
             if (body.active != true)
             {
                 mc.speed /= gainSpeedOnDeath;
                 body.SetActive(true);
             }
-            
             ghostState = GhostStates.goOutOfHome;
         }
     }
@@ -56,6 +62,10 @@ public class EnemiBlue : EnemyControler
     protected override void goOutOfHome()
     {
 
+        if (transform.position == pinkNode.transform.position)
+        {
+            mc.currentNode = redNode;
+        }
 
 
         if (transform.position == redNode.transform.position)
@@ -70,13 +80,19 @@ public class EnemiBlue : EnemyControler
 
     protected override Vector3 PlayerPos(GameObject Player)
     {
+        MovemantControler mcp = player.GetComponent<MovemantControler>();
 
-        Pointer.transform.position = player.transform.position - (RedGhost.transform.position - (Player.transform.position));
+        if (Vector2.Distance(transform.position, player.transform.position)>=8)
+        {
+            return player.transform.position;
+        }
+        else
+        {
+            return finder.transform.position;
+        }
 
-
-
-        return player.transform.position-(RedGhost.transform.position - (Player.transform.position));
+       
 
     }
-}
 
+}
