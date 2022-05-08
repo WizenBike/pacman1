@@ -6,6 +6,12 @@ public class EnemyPink : EnemyControler
 {
     public int a;
     public GameObject Pointer;
+    public float stayInHomeTime;
+    public bool stayInHome;
+    float timeS;
+
+   
+
     // Start is called before the first frame update
 
 
@@ -40,7 +46,7 @@ public class EnemyPink : EnemyControler
         
         if (transform.position == startNode.transform.position)
         {
-            print("Leblebleble");
+           
             mc.currentNode = redNode;
         }
 
@@ -56,26 +62,49 @@ public class EnemyPink : EnemyControler
                 body.SetActive(true);
             }
             ghostState = GhostStates.goOutOfHome;
+            stayInHome = true;
         }
     }
 
     protected override void goOutOfHome()
     {
+        print("Idem Von");
 
-        if (transform.position == pinkNode.transform.position)
-        {
-            mc.currentNode = redNode;
-        }
        
+        
+            if (stayInHome == true)
+            {
+                timeS += Time.deltaTime;
+                if (stayInHomeTime < timeS)
+                {
+                    stayInHome = false;
+                    timeS = 0;
+                }
+            }
 
-        if (transform.position == redNode.transform.position)
+
+
+        if (stayInHome == false)
         {
-            mc.currentNode = startNode;
+            if (transform.position == pinkNode.transform.position)
+            {
+                mc.currentNode = redNode;
+            }
+
+
+            if (transform.position == redNode.transform.position)
+            {
+                mc.currentNode = startNode;
+            }
+            if (transform.position == startNode.transform.position)
+            {
+                ghostState = GhostStates.chase;
+            }
         }
-        if (transform.position == startNode.transform.position)
-        {
-            ghostState = GhostStates.chase;
-        }
+
+
+        
+        
     }
 
     protected override Vector3 PlayerPos(GameObject Player)
@@ -105,5 +134,13 @@ public class EnemyPink : EnemyControler
 
         return player.transform.position;
 
+    }
+    protected override void posAfterCatch()
+    {
+
+        mc.currentNode = pinkNode;
+
+        transform.position = pinkNode.transform.position;
+        ghostState = GhostStates.goHome;
     }
 }

@@ -6,6 +6,12 @@ public class EnemiOrange : EnemyControler
 {
     public int a;
     public GameObject Pointer;
+    public float stayInHomeTime;
+    public bool stayInHome;
+    float timeS;
+
+
+    
     // Start is called before the first frame update
 
 
@@ -40,15 +46,15 @@ public class EnemiOrange : EnemyControler
 
         if (transform.position == startNode.transform.position)
         {
-            print("Leblebleble");
+           
             mc.currentNode = redNode;
         }
 
         if (transform.position == redNode.transform.position)
         {
-            mc.currentNode = pinkNode;
+            mc.currentNode = blueNode;
         }
-        if (transform.position == pinkNode.transform.position)
+        if (transform.position == blueNode.transform.position)
         {
             if (body.active != true)
             {
@@ -56,26 +62,45 @@ public class EnemiOrange : EnemyControler
                 body.SetActive(true);
             }
             ghostState = GhostStates.goOutOfHome;
+            stayInHome = true;
         }
     }
 
     protected override void goOutOfHome()
     {
 
-        if (transform.position == pinkNode.transform.position)
+
+        if (stayInHome == true)
         {
-            mc.currentNode = redNode;
+            timeS += Time.deltaTime;
+            if (stayInHomeTime < timeS)
+            {
+                stayInHome = false;
+                timeS = 0;
+            }
         }
 
 
-        if (transform.position == redNode.transform.position)
+
+        if (stayInHome == false)
         {
-            mc.currentNode = startNode;
+
+            if (transform.position == blueNode.transform.position)
+            {
+                mc.currentNode = redNode;
+            }
+
+
+            if (transform.position == redNode.transform.position)
+            {
+                mc.currentNode = startNode;
+            }
+            if (transform.position == startNode.transform.position)
+            {
+                ghostState = GhostStates.chase;
+            }
         }
-        if (transform.position == startNode.transform.position)
-        {
-            ghostState = GhostStates.chase;
-        }
+        
     }
 
     protected override Vector3 PlayerPos(GameObject Player)
@@ -93,6 +118,14 @@ public class EnemiOrange : EnemyControler
 
        
 
+    }
+    protected override void posAfterCatch()
+    {
+      
+        mc.currentNode = blueNode;
+
+        transform.position = blueNode.transform.position;
+        ghostState = GhostStates.goHome;
     }
 
 }

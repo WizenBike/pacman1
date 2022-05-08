@@ -24,7 +24,7 @@ public class NodeControler : MonoBehaviour
        if (startNode == false)
        {
 
-        print("aede");
+        
         RaycastHit2D[] hitDown;
         hitDown = Physics2D.RaycastAll(transform.position, -Vector2.up);
         for(int i = 0; i < hitDown.Length; i++)

@@ -7,6 +7,12 @@ public class EnemiBlue : EnemyControler
     // Start is called before the first frame update
     public GameObject Pointer;
     public GameObject RedGhost;
+    public float stayInHomeTime;
+    public bool stayInHome;
+    float timeS;
+
+
+  
 
     protected override void SwitchToScatter()
     {
@@ -33,7 +39,7 @@ public class EnemiBlue : EnemyControler
     }
     protected override void goHome()
     {
-
+        print("Blue goin to go");
         if (transform.position == startNode.transform.position)
         {
 
@@ -50,22 +56,42 @@ public class EnemiBlue : EnemyControler
             }
             
             ghostState = GhostStates.goOutOfHome;
+            stayInHome = true;
+
         }
     }
 
     protected override void goOutOfHome()
     {
 
+        if (stayInHome == true)
+        {
+            timeS += Time.deltaTime;
+            if (stayInHomeTime < timeS)
+            {
+                stayInHome = false;
+                timeS = 0;
+            }
+        }
 
 
-        if (transform.position == redNode.transform.position)
+
+        if (stayInHome == false)
         {
-            mc.currentNode = startNode;
+
+
+
+            if (transform.position == redNode.transform.position)
+            {
+                mc.currentNode = startNode;
+            }
+            if (transform.position == startNode.transform.position)
+            {
+                ghostState = GhostStates.chase;
+            }
+
         }
-        if (transform.position == startNode.transform.position)
-        {
-            ghostState = GhostStates.chase;
-        }
+      
     }
 
     protected override Vector3 PlayerPos(GameObject Player)
@@ -77,6 +103,13 @@ public class EnemiBlue : EnemyControler
 
         return player.transform.position-(RedGhost.transform.position - (Player.transform.position));
 
+    }
+    protected override void posAfterCatch()
+    {
+        mc.currentNode = redNode;
+
+        transform.position = redNode.transform.position;
+        ghostState = GhostStates.goHome;
     }
 }
 

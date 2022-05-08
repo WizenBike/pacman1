@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Un poko loko");
+       
         if (unKillable == false)
         {
             if (collision.gameObject.CompareTag("Wall") )

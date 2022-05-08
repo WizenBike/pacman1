@@ -5,7 +5,12 @@ using UnityEngine;
 public class EnemiRed : EnemyControler
 {
     public int pointsToSwitchOffScatter;
+    public float stayInHomeTime;
+    public bool stayInHome;
+    float timeS;
 
+
+   
     protected override void SwitchToScatter()
     {
         if (Spawn.ballCount <= pointsToSwitchOffScatter)
@@ -47,21 +52,46 @@ public class EnemiRed : EnemyControler
                 body.SetActive(true);
             }
             ghostState = GhostStates.goOutOfHome;
+            stayInHome = true;
         }
     }
 
     protected override void goOutOfHome()
     {
 
+        if (stayInHome == true)
+        {
+            timeS += Time.deltaTime;
+            if (stayInHomeTime < timeS)
+            {
+                stayInHome = false;
+                timeS = 0;
+            }
+        }
 
 
-        if (transform.position == redNode.transform.position)
+
+        if (stayInHome == false)
         {
-            mc.currentNode = startNode;
+
+
+            if (transform.position == redNode.transform.position)
+            {
+                mc.currentNode = startNode;
+            }
+            if (transform.position == startNode.transform.position)
+            {
+                ghostState = GhostStates.chase;
+            }
         }
-        if (transform.position == startNode.transform.position)
-        {
-            ghostState = GhostStates.chase;
-        }
+        
+    }
+
+    protected override void posAfterCatch()
+    {
+        mc.currentNode = startNode;
+
+        transform.position = startNode.transform.position;
+       
     }
 }

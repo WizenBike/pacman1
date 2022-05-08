@@ -9,7 +9,7 @@ public class PowerPalet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("gsrfgydgs");
+           
             PayerControler.Instance.CollideWithPower?.Invoke();
             Spawn.score += scoreOnCollect;
             Destroy(gameObject);

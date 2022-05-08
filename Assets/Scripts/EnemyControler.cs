@@ -68,11 +68,11 @@ public class EnemyControler : MonoBehaviour
     void Start()
     {
         _anim = GetComponent<Animator>();
-        print("Dopièíííííííí");
+       
         PayerControler.Instance.CollideWithPower += () => {
             if (ghostState != GhostStates.goHome && ghostState != GhostStates.goOutOfHome)
             {
-                print("Poooomeeee kokot");
+               
                 _anim.SetBool("isScared", true);
                 ghostState = GhostStates.scared;
                 scaredTime = scaredDuration;
@@ -80,9 +80,18 @@ public class EnemyControler : MonoBehaviour
            
             
         };
+
+       PayerControler.Instance.collisionWithGhost += () => {
+
+            print("ANOOOOOOOOO");
+
+            posAfterCatch();
+            
+
+       };
         if (startNode != null )
         {
-            print("CURENT NODEEEEEEE");
+           
 
            
             mc.currentNode = startNode;
@@ -91,6 +100,10 @@ public class EnemyControler : MonoBehaviour
 
     }
 
+    protected virtual void posAfterCatch()
+    {
+
+    }
 
     protected virtual void goHome()
     {
@@ -156,7 +169,7 @@ public class EnemyControler : MonoBehaviour
 
         if (startNode == null && collision.gameObject.CompareTag("Gulicka"))
         {
-            print("CURENT NODEEEEEEE");
+          
 
             startNode = collision.gameObject;
             mc.currentNode = startNode;

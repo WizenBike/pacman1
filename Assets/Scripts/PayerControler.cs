@@ -7,7 +7,10 @@ public class PayerControler : MonoBehaviour
     public static PayerControler Instance;
 
     public delegate void Collide();
+    public Collide collisionWithGhost;
     public Collide CollideWithPower;
+    public GameObject startNode;
+
 
     bool nodeSetted = false;
     public MovemantControler mc;
@@ -63,7 +66,16 @@ public class PayerControler : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Gulicka") && nodeSetted == false)
         {
+            startNode =collision.gameObject; 
             mc.currentNode = collision.gameObject;
+            nodeSetted = true;
+        }
+
+        if (collision.gameObject.CompareTag("Enemy") && collision.gameObject.GetComponent<EnemyControler>().ghostState != EnemyControler.GhostStates.scared && collision.gameObject.GetComponent<EnemyControler>().ghostState != EnemyControler.GhostStates.goHome)
+        {
+            collisionWithGhost?.Invoke();
+            transform.position = startNode.transform.position;
+            mc.currentNode = startNode;
         }
     }
 }
