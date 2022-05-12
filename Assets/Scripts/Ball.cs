@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
         if (unKillable == false)
         {
             if (collision.gameObject.CompareTag("Wall") )
-            {
+            {SS
                 Destroy(gameObject);
                 Spawn.countOfAllBalls--;
             }
