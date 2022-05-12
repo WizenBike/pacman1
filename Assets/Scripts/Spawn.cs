@@ -22,6 +22,8 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        countOfAllBalls = 0;
+        currentBallsInScene = 0;
         windowXStart = transform.position.x;
         windowYStart = transform.position.y;
         for (float x = 0 ; x <= windowSize.x ; x += 1) 

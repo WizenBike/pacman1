@@ -11,12 +11,19 @@ public class EnemiOrange : EnemyControler
     float timeS;
 
 
-    
+
     // Start is called before the first frame update
 
 
     // Update is called once per frame
-
+    protected override void GetStartPos()
+    {
+        transform.position = blueNode.transform.position;
+        mc.currentNode = blueNode;
+    }
+    
+        
+    
     protected override void SwitchToScatter()
     {
 
@@ -62,7 +69,7 @@ public class EnemiOrange : EnemyControler
                 body.SetActive(true);
             }
             ghostState = GhostStates.goOutOfHome;
-            stayInHome = true;
+           
         }
     }
 
@@ -126,6 +133,13 @@ public class EnemiOrange : EnemyControler
 
         transform.position = blueNode.transform.position;
         ghostState = GhostStates.goHome;
+        stayInHome = true;
+        _anim.SetBool("isScared", false);
+        if (body.active != true)
+        {
+            mc.speed /= gainSpeedOnDeath;
+            body.SetActive(true);
+        }
     }
 
 }

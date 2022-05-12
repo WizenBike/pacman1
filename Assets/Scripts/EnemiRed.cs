@@ -10,7 +10,11 @@ public class EnemiRed : EnemyControler
     float timeS;
 
 
-   
+
+    protected override void GetStartPos()
+    {
+        transform.position = startNode.transform.position;
+    }
     protected override void SwitchToScatter()
     {
         if (Spawn.ballCount <= pointsToSwitchOffScatter)
@@ -52,7 +56,7 @@ public class EnemiRed : EnemyControler
                 body.SetActive(true);
             }
             ghostState = GhostStates.goOutOfHome;
-            stayInHome = true;
+           
         }
     }
 
@@ -92,6 +96,15 @@ public class EnemiRed : EnemyControler
         mc.currentNode = startNode;
 
         transform.position = startNode.transform.position;
-       
+        stayInHome = true;
+        ghostState = GhostStates.chase;
+
+        _anim.SetBool("isScared", false);
+        if (body.active != true)
+        {
+            mc.speed /= gainSpeedOnDeath;
+            body.SetActive(true);
+        }
+
     }
 }

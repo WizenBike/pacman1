@@ -11,8 +11,12 @@ public class EnemiBlue : EnemyControler
     public bool stayInHome;
     float timeS;
 
+    protected override void GetStartPos()
+    {
+        transform.position = redNode.transform.position;
+        mc.currentNode = redNode;
+    }
 
-  
 
     protected override void SwitchToScatter()
     {
@@ -56,7 +60,7 @@ public class EnemiBlue : EnemyControler
             }
             
             ghostState = GhostStates.goOutOfHome;
-            stayInHome = true;
+            
 
         }
     }
@@ -110,6 +114,14 @@ public class EnemiBlue : EnemyControler
 
         transform.position = redNode.transform.position;
         ghostState = GhostStates.goHome;
+        stayInHome = true;
+        _anim.SetBool("isScared", false);
+        if (body.active != true)
+        {
+            mc.speed /= gainSpeedOnDeath;
+            body.SetActive(true);
+        }
+
     }
 }
 

@@ -10,13 +10,18 @@ public class EnemyPink : EnemyControler
     public bool stayInHome;
     float timeS;
 
-   
+
 
     // Start is called before the first frame update
 
 
     // Update is called once per frame
 
+    protected override void GetStartPos()
+    {
+        transform.position = pinkNode.transform.position;
+        mc.currentNode = pinkNode;
+    }
     protected override void SwitchToScatter()
     {
         
@@ -62,7 +67,7 @@ public class EnemyPink : EnemyControler
                 body.SetActive(true);
             }
             ghostState = GhostStates.goOutOfHome;
-            stayInHome = true;
+            
         }
     }
 
@@ -142,5 +147,12 @@ public class EnemyPink : EnemyControler
 
         transform.position = pinkNode.transform.position;
         ghostState = GhostStates.goHome;
+        stayInHome = true;
+        _anim.SetBool("isScared", false);
+        if (body.active != true)
+        {
+            mc.speed /= gainSpeedOnDeath;
+            body.SetActive(true);
+        }
     }
 }

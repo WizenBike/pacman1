@@ -22,7 +22,7 @@ public class EnemyControler : MonoBehaviour
     public int scoreOnCatch;
     public float scaredDuration;
     public float scaredTime;
-    private Animator _anim; 
+    public Animator _anim; 
     public GameObject pinkNode;
     public GameObject blueNode;
     public GameObject orangeNode;
@@ -97,6 +97,12 @@ public class EnemyControler : MonoBehaviour
             mc.currentNode = startNode;
 
         }
+        GetStartPos();
+
+    }
+
+    protected virtual void GetStartPos()
+    {
 
     }
 

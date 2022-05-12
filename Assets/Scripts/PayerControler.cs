@@ -74,6 +74,7 @@ public class PayerControler : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && collision.gameObject.GetComponent<EnemyControler>().ghostState != EnemyControler.GhostStates.scared && collision.gameObject.GetComponent<EnemyControler>().ghostState != EnemyControler.GhostStates.goHome)
         {
             collisionWithGhost?.Invoke();
+            GameInstance.gi.HP--;
             transform.position = startNode.transform.position;
             mc.currentNode = startNode;
         }
