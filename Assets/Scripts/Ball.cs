@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
         if (unKillable == false)
         {
             if (collision.gameObject.CompareTag("Wall") )
-            {SS
+            {
                 Destroy(gameObject);
                 Spawn.countOfAllBalls--;
             }
@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour
         print(Spawn.ballCount);
         sr.color = new Color(1f,1f,1f,0f);
         unDestroyed = false;
-
+        MusicPlayer.Instance.PlaySound("waka");
 
        }
      
