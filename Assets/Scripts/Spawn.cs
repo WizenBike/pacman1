@@ -14,6 +14,7 @@ public class Spawn : MonoBehaviour
     public static int ballCount;
     public static int score;
     public TMP_Text scoreT;
+    public TMP_Text levelT;
     public GameObject packman;
     public  static int countOfAllBalls;
     public static int currentBallsInScene;
@@ -24,6 +25,7 @@ public class Spawn : MonoBehaviour
     {
         countOfAllBalls = 0;
         currentBallsInScene = 0;
+        ballCount = 0;
         windowXStart = transform.position.x;
         windowYStart = transform.position.y;
         for (float x = 0 ; x <= windowSize.x ; x += 1) 
@@ -41,9 +43,10 @@ public class Spawn : MonoBehaviour
     }
     void Update()
     {
-        
+        print(countOfAllBalls);
         packman.SetActive(true);
         scoreT.text =  score.ToString();
+        levelT.text = GameInstance.gi.level.ToString();
     }
 
 
