@@ -7,6 +7,8 @@ public class MovemantControler : MonoBehaviour
     public float speed;
     public GameObject currentNode;
     public string direction;
+    public string wantDir;
+
     public string lastDirection;
     public EnemyControler ec;
 
@@ -59,13 +61,23 @@ public class MovemantControler : MonoBehaviour
             if (this.gameObject.CompareTag("Player"))
             {
                 GameObject newNode = currentNodeControler.getNodeFromDirection(direction);
-                if (newNode != null)
+                GameObject newNodeWanted = currentNodeControler.getNodeFromDirection(wantDir);
+                if (newNodeWanted != null)
                 {
+                    currentNode = newNodeWanted;
+                    lastDirection = wantDir;
+                    direction = wantDir; 
+
+                }
+                else if (newNode != null)
+                {
+                   
                     currentNode = newNode;
                     lastDirection = direction;
                 }
                 else
                 {
+                    
                     direction = lastDirection;
                     newNode = currentNodeControler.getNodeFromDirection(direction);
                     if (newNode != null)
@@ -82,7 +94,9 @@ public class MovemantControler : MonoBehaviour
 
     public void setDirection(string newDirection)
     {
-        direction = newDirection; 
+        direction = newDirection;
+        wantDir = newDirection;
+       
     }
 
 }

@@ -7,9 +7,16 @@ public class GameInstance : MonoBehaviour
 {  
     static public GameInstance gi;
     public int HP = 5;
-    
+    public GameObject Fruit;
     public int[] levels;
-    public int level;
+    public int level = 1;
+    public int levelIndex;
+    public float fruteTimer;
+    public int fruteTime;
+    public bool fruitSpawned = false;
+
+    [HideInInspector]
+    public List<int> skinsIds;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +32,14 @@ public class GameInstance : MonoBehaviour
             Destroy(gameObject);
         }
 
-        
+        if (!PlayerPrefs.HasKey("skins"))
+        {
+            PlayerPrefs.SetString("skins", "");
+        }
+
+
+
+        skinsIds = GetSkinsIDS();
        
     }
 
@@ -39,36 +53,99 @@ public class GameInstance : MonoBehaviour
         {
             Win();
             
+
+
         }
         else if (HP <0)
         {
             Lose();
-
-            level = 0;
+            levelIndex = 0;
+            level = 1;
             HP = 5;
+        }
+
+        fruteTimer += Time.deltaTime;
+        if (fruteTimer> fruteTime && fruitSpawned == false)
+        {
+            SpawnFruit();
         }
     }
 
     public void Lose()
     {
+        fruitSpawned = false;
         SceneManager.LoadScene(0);
     }
     public void Win() 
     {
+        fruitSpawned = false;
+        level++;
         print("U WON");
-        if (level == levels.Length -1)
+        if (levelIndex == levels.Length -1)
         {
-            level = 0;
+            levelIndex = 0;
         }
         else
         {
-            level++;
+            levelIndex ++; 
         }
         
-        SceneManager.LoadScene(levels[level]); 
+        SceneManager.LoadScene(levels[levelIndex]); 
+    }
+    public void SpawnFruit()
+    {
+        Instantiate(Fruit, transform.position, Quaternion.identity) ;
+        fruitSpawned = true;
     }
 
-   
+    public List<int> GetSkinsIDS()
+    {
+        string[] stringTexts;
+        if (PlayerPrefs.HasKey("skins"))
+        {
+            stringTexts = PlayerPrefs.GetString("skins").Split(" ");
 
-    
+            List<int> ids = new List<int>();
+
+            foreach (string id in stringTexts)
+            {
+                ids.Add(int.Parse(id));
+            }
+
+            return ids;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public void AddSkin(int id)
+    {
+        skinsIds.Add(id);
+    }
+
+    private void OnApplicationQuit()
+    {
+
+        PlayerPrefs.SetString("skins", GetSkinsToString());
+        PlayerPrefs.Save();
+    }
+
+    private string GetSkinsToString()
+    {
+        string s = "";
+
+        foreach (int i in skinsIds)
+        {
+            s += " " +  i.ToString();
+        }
+
+        return s;
+    }
+
+
+
+
+
 }

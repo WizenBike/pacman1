@@ -32,9 +32,5 @@ public class menupac : MonoBehaviour
         transform.DOMove(target, 2f).OnComplete(MoveRightDown).SetEase(ease);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
