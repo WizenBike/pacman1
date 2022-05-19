@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SkinStand : MonoBehaviour
 {
+    public Sprite[] skyns;
+
     // Start is called before the first frame update
     void Start()
     {
