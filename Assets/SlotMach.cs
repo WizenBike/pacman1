@@ -22,26 +22,27 @@ public class SlotMach : MonoBehaviour
     }
     public void Button()
     {
-        float chance = Random.Range(0, 101);
+        int score = 0;
+        if (Spawn.score >= 1000) score = Spawn.score / 500;
+
+        float chance = Random.Range(0, 1001);
         bool mythic = true;
         
-        if (chance <= 70)
+        if (chance < 610-score*2)
         {
             Debug.Log("common");
         }
-        else if (chance > 70 &&chance<90)
+        else if (chance >= 610-score*2 && chance < 940 - score)
         {
             Debug.Log("rare");
         }
-        else if (chance >= 90&& chance<99)
+        else if (chance >= 940-score && chance < 990)
         {
             Debug.Log("legendary");
         }
-        else if (chance >= 99 && mythic)
+        else if (chance >= 990 && mythic)
         {
             Debug.Log("mythic");
         }
-
-
     }
 }
