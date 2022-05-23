@@ -25,7 +25,7 @@ public class SlotMach : MonoBehaviour
         int score = 0;
         if (Spawn.score >= 1000) score = Spawn.score / 500;
 
-        float chance = Random.Range(0, 1000s);
+        float chance = Random.Range(0, 1000);
         bool mythic = true;
         
         if (chance < 610-score*2)
