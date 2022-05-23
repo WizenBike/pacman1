@@ -14,6 +14,7 @@ public class GameInstance : MonoBehaviour
     public float fruteTimer;
     public int fruteTime;
     public bool fruitSpawned = false;
+    public int currentSkynID;
 
     [HideInInspector]
     public List<int> skinsIds;
@@ -37,6 +38,8 @@ public class GameInstance : MonoBehaviour
             PlayerPrefs.SetString("skins", "");
         }
 
+        PlayerPrefs.SetString("skins", "0 1 2");
+
 
 
         skinsIds = GetSkinsIDS();
@@ -49,7 +52,7 @@ public class GameInstance : MonoBehaviour
     void Update()
     {
        
-        if (Spawn.countOfAllBalls == Spawn.ballCount)
+        if (Spawn.countOfAllBalls == Spawn.ballCount && Spawn.countOfAllBalls > 0)
         {
             Win();
             
@@ -65,7 +68,7 @@ public class GameInstance : MonoBehaviour
         }
 
         fruteTimer += Time.deltaTime;
-        if (fruteTimer> fruteTime && fruitSpawned == false)
+        if (fruteTimer> fruteTime && fruitSpawned == false && Spawn.countOfAllBalls > 0)
         {
             SpawnFruit();
         }
