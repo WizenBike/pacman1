@@ -15,18 +15,14 @@ public class SlotMach : MonoBehaviour
         Button();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void Button()
     {
         int score = 0;
         if (Spawn.score >= 1000) score = Spawn.score / 500;
 
         float chance = Random.Range(0, 1000);
-        bool mythic = true;
+       
         
         if (chance < 610-score*2)
         {
@@ -40,7 +36,7 @@ public class SlotMach : MonoBehaviour
         {
             Debug.Log("legendary");
         }
-        else if (chance >= 990 && mythic)
+        else if (chance >= 990)
         {
             Debug.Log("mythic");
         }
