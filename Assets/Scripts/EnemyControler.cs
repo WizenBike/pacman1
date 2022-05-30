@@ -190,6 +190,7 @@ public class EnemyControler : MonoBehaviour
             ghostState = GhostStates.goHome;
             Spawn.score += scoreOnCatch;
             body.SetActive(false);
+
             
         }
     }

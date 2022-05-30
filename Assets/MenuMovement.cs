@@ -47,7 +47,7 @@ public class MenuMovement : MonoBehaviour
             ruzovy.DOMove(new Vector2(xEnd, ruzovy.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
             pacman.DOMove(new Vector2(xEnd, pacman.position.y), time).SetEase(Ease.Linear);
-            pacman.GetComponent<SpriteRenderer>().flipX = true;
+            pacman.GetComponent<SpriteRenderer>().flipX = false;
             yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xEnd, cerveny.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(time);
@@ -55,7 +55,7 @@ public class MenuMovement : MonoBehaviour
             //Cesta s5
             ruzovy.DOMove(new Vector2(xStart, ruzovy.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
-            pacman.GetComponent<SpriteRenderer>().flipX = false;
+            pacman.GetComponent<SpriteRenderer>().flipX = true;
             pacman.DOMove(new Vector2(xStart, pacman.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xStart, cerveny.position.y), time).SetEase(Ease.Linear);

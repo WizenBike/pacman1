@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     public SpriteRenderer sr;
     public bool unDestroyed = true;
     public bool unKillable = false;
+    public AudioSource whoo;
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -47,7 +48,8 @@ public class Ball : MonoBehaviour
         print(Spawn.ballCount);
         sr.color = new Color(1f,1f,1f,0f);
         unDestroyed = false;
-        MusicPlayer.Instance.PlaySound("waka");
+        MusicPlayer.Instance.PlaySound("jedenie");
+        Debug.LogWarning("Playing");
 
        }
      

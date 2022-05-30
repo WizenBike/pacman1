@@ -514,7 +514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235630610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.71, y: -1.57, z: 0}
+  m_LocalPosition: {x: -12.71, y: 1.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1727,7 +1727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009458640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.67, y: -1.61, z: 0}
+  m_LocalPosition: {x: -12.67, y: 2.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2382,7 +2382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264018828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.71, y: -1.57, z: 0}
+  m_LocalPosition: {x: -12.71, y: 1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2925,7 +2925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639645100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.7, y: -1.52, z: 0}
+  m_LocalPosition: {x: -12.7, y: 1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3002,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 7774276357281737876, guid: 3568e551971cd7740b14b3856f742763,
         type: 3}
       propertyPath: _persistent
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7774276357281737876, guid: 3568e551971cd7740b14b3856f742763,
         type: 3}
@@ -3037,17 +3037,17 @@ PrefabInstance:
     - target: {fileID: 7774276357281737876, guid: 3568e551971cd7740b14b3856f742763,
         type: 3}
       propertyPath: soundAssets.Array.data[0].volume
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7774276357281737876, guid: 3568e551971cd7740b14b3856f742763,
         type: 3}
       propertyPath: soundAssets.Array.data[1].volume
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7774276357281737876, guid: 3568e551971cd7740b14b3856f742763,
         type: 3}
       propertyPath: soundAssets.Array.data[2].volume
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7774276357281737876, guid: 3568e551971cd7740b14b3856f742763,
         type: 3}

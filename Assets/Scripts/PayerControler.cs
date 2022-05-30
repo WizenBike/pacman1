@@ -78,5 +78,10 @@ public class PayerControler : MonoBehaviour
             transform.position = startNode.transform.position;
             mc.currentNode = startNode;
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+             
+        }
     }
 }
