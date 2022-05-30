@@ -10,6 +10,7 @@ public class PayerControler : MonoBehaviour
     public Collide collisionWithGhost;
     public Collide CollideWithPower;
     public GameObject startNode;
+  
 
 
     bool nodeSetted = false;
@@ -18,7 +19,8 @@ public class PayerControler : MonoBehaviour
     void Awake()
     {
         mc = GetComponent<MovemantControler>();
-        Instance = this; 
+        Instance = this;
+       
     }
 
     // Update is called once per frame

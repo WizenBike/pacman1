@@ -43,12 +43,14 @@ public class SkinStand : MonoBehaviour
 
     public void Pick()
     {
-
+        GameInstance.gi.currentSkynID = skynIndex;
     }
 
    public void LoadSkyn()
    {
         sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]]; 
    }
+
+
 
 }
