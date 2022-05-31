@@ -38,7 +38,7 @@ public class GameInstance : MonoBehaviour
             PlayerPrefs.SetString("skins", "");
         }
 
-        PlayerPrefs.SetString("skins", "0 1 2");
+        PlayerPrefs.SetString("skins", "0");
 
 
 

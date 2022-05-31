@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct Skin
+{
+    public Sprite skin;
+    public int index;
+    public string rarity;
+
+}
 public class SlotMach : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public Skin[] mySkins;
     public Sprite[] comon;
     public Sprite[] rare;
     public Sprite[] legendary;
     public Sprite[] mithic;
+    public string rarita;
     public bool shuffling = false;
+   
+    
 
 
 
@@ -41,21 +52,52 @@ public class SlotMach : MonoBehaviour
 
     }
 
-    IEnumerator Shafle(Sprite[] rarity)
-    {   
+    int FindID(Sprite skin)
+    {
+        foreach(Sprite sprite in shafle)
+        {
+         if(skin == sprite)
+            {
+                return shafle.IndexOf(sprite); 
+            }
+        }
+        return 0;
+    }
+
+    IEnumerator Shafle(string rarity)
+    {
+        List<Skin> skinyNaVyber = new List<Skin>();
         print("Moj ti boh ");
         float wait = 0.01f ;
         int N = 0;
         for (int i = 0; i < 40; i++)
         {
-            if (N == shafle.Count-1) N=0 ;
-            N++; 
-            sr.sprite = shafle[N];
+            print(N);
+            if (N == mySkins.Length -1) {
+                N = 0;
+            } else
+            {
+                N++;
+            }
+            
+            sr.sprite = mySkins[N].skin;
             yield return new WaitForSeconds(wait);
             wait += 0.01f;
         }
-        int rand = Random.Range(0, rarity.Length);
-        sr.sprite = rarity[rand];
+        foreach (Skin mojSkinu in mySkins)
+        {
+         if(mojSkinu.rarity == rarity)
+            {
+                skinyNaVyber.Add(mojSkinu);
+            }
+        }
+        int rand = Random.Range(0, skinyNaVyber.Count );
+        sr.sprite = skinyNaVyber[rand].skin;
+        print(GameInstance.gi.skinsIds + " Labla ???");
+        print(skinyNaVyber[rand].index + " ???");
+        GameInstance.gi.AddSkin(skinyNaVyber[rand].index);
+        
+
 
         shuffling = false;
     }
@@ -76,19 +118,19 @@ public class SlotMach : MonoBehaviour
         if (chance < 610-score*2)
         {
             Debug.Log("common");
-            skyns = comon;
+            rarita = "comon";
         }
         //33%
         else if (chance >= 610-score*2 && chance < 940 - score)
         {
             Debug.Log("rare");
-            skyns = rare;
+            rarita = "rare";
         }
         //5%
         else if (chance >= 940-score && chance < 990)
         {
             Debug.Log("legendary");
-            skyns = legendary;
+            rarita = "legendary";
         }
         //1%
         else if (chance >= 990)
@@ -98,7 +140,7 @@ public class SlotMach : MonoBehaviour
         if (shuffling == false)
         {
             shuffling = true;
-            StartCoroutine(Shafle(comon));
+            StartCoroutine(Shafle("comon"));
             
 
         }
@@ -127,5 +169,8 @@ public class SlotMach : MonoBehaviour
         if (!shuffling) Button();
     }
 
+   
+
 
 }
+

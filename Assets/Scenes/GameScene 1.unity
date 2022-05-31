@@ -682,9 +682,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 5
+  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 0100000004000000
   level: 0
   levelIndex: 0
+  fruteTimer: 0
+  fruteTime: 0
+  fruitSpawned: 0
+  currentSkynID: 0
+  skinsIds: 
 --- !u!4 &261052152
 Transform:
   m_ObjectHideFlags: 0
@@ -2063,6 +2069,7 @@ MonoBehaviour:
   speed: 8
   currentNode: {fileID: 0}
   direction: 
+  wantDir: 
   lastDirection: 
   ec: {fileID: 0}
 --- !u!1 &594614090
