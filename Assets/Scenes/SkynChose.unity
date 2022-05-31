@@ -950,6 +950,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySkins:
+  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
+    index: 1
+    rarity: comon
+  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
+    index: 2
+    rarity: comon
   HP: 5
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 0100000004000000

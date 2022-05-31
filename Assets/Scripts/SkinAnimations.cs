@@ -11,6 +11,7 @@ public class SkinAnimations : MonoBehaviour
 
         animation = GetComponent<Animator>();
         animation.SetInteger("skinIndex",GameInstance.gi.currentSkynID);
+        print(GameInstance.gi.currentSkynID + "AHOOOOOOOOOOOOOOOOOJ");
     }
     void Start()
     {

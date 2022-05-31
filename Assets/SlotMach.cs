@@ -2,25 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public struct Skin
-{
-    public Sprite skin;
-    public int index;
-    public string rarity;
 
-}
 public class SlotMach : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Skin[] mySkins;
+   
+    
     public Sprite[] comon;
     public Sprite[] rare;
     public Sprite[] legendary;
     public Sprite[] mithic;
     public string rarita;
     public bool shuffling = false;
-   
+    public SpriteRenderer svetlo;
+    public Animator machine;
+ 
     
 
 
@@ -73,18 +69,18 @@ public class SlotMach : MonoBehaviour
         for (int i = 0; i < 40; i++)
         {
             print(N);
-            if (N == mySkins.Length -1) {
+            if (N == GameInstance.gi.mySkins.Length -1) {
                 N = 0;
             } else
             {
                 N++;
             }
             
-            sr.sprite = mySkins[N].skin;
+            sr.sprite = GameInstance.gi.mySkins[N].skin;
             yield return new WaitForSeconds(wait);
             wait += 0.01f;
         }
-        foreach (Skin mojSkinu in mySkins)
+        foreach (Skin mojSkinu in GameInstance.gi.mySkins)
         {
          if(mojSkinu.rarity == rarity)
             {
@@ -93,12 +89,15 @@ public class SlotMach : MonoBehaviour
         }
         int rand = Random.Range(0, skinyNaVyber.Count );
         sr.sprite = skinyNaVyber[rand].skin;
+
         print(GameInstance.gi.skinsIds + " Labla ???");
         print(skinyNaVyber[rand].index + " ???");
+
         GameInstance.gi.AddSkin(skinyNaVyber[rand].index);
-        
+        ChangeCollor(skinyNaVyber[rand].rarity);
 
 
+        machine.SetBool("pressed", false);
         shuffling = false;
     }
     // Update is called once per frame
@@ -166,9 +165,31 @@ public class SlotMach : MonoBehaviour
 
     public void Rolling()
     {
+        machine.SetBool("pressed", true);
         if (!shuffling) Button();
+
     }
 
+    public void ChangeCollor(string rarita)
+    {
+        
+     if (rarita == "comon")
+     {
+            svetlo.color = new Color(0f,115f,50f,225);     
+     }else if(rarita == "rare")
+     {
+            svetlo.color = new Color(0f, 50f, 115f, 225);
+     }
+     else if(rarita == "legendary")
+     {
+            svetlo.color = new Color(119, 119, 119, 225);
+     }
+     else 
+     {
+            svetlo.color = new Color(255, 19, 0, 225);
+     }
+     
+    }
    
 
 

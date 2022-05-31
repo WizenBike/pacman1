@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class SkinStand : MonoBehaviour
 {
-    public Sprite[] skyns;
-    public int skynIndex = 0;
+    List<Skin> avableSkyns = new List<Skin>();
+    public int Index = 0;
     SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]];
+        //sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]];
+        foreach (Skin mojSkin in GameInstance.gi.mySkins)
+        {
+            Debug.LogError(mojSkin.skin);
+            if (GameInstance.gi.skinsIds.Contains(mojSkin.index))
+            {
+                Debug.LogError(mojSkin.skin + "Naseusem");
+                avableSkyns.Add(mojSkin);
+            }              
+
+        }
+        sr.sprite = avableSkyns[0].skin;
 
     }
 
@@ -24,32 +35,33 @@ public class SkinStand : MonoBehaviour
 
     public void Left()
     {
-        if (skynIndex > 0)
+        if (Index > 0)
         {
-            skynIndex--;
-            sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]];
+            Index--;
+            sr.sprite = avableSkyns[Index].skin;
         }
 
         
     }
     public void Right()
     {
-        if (skynIndex < GameInstance.gi.skinsIds.Count-1)
+        if (Index < GameInstance.gi.skinsIds.Count-1)
         {
-            skynIndex++;
-            sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]];
+            Index++;
+            sr.sprite = avableSkyns[Index].skin;
         }
     }
 
     public void Pick()
     {
-        GameInstance.gi.currentSkynID = skynIndex;
+        GameInstance.gi.currentSkynID = avableSkyns[Index].index;
+        Debug.LogError(avableSkyns[Index].index);
     }
 
    public void LoadSkyn()
    {
-        sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]]; 
-   }
+        sr.sprite = avableSkyns[Index].skin;
+    }
 
 
 

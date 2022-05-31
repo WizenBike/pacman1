@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+[System.Serializable]
+public struct Skin
+{
+    public Sprite skin;
+    public int index;
+    public string rarity;
+
+}
 public class GameInstance : MonoBehaviour
-{  
+{
+    public Skin[] mySkins;
     static public GameInstance gi;
     public int HP = 5;
     public GameObject Fruit;
