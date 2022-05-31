@@ -25,12 +25,18 @@ public class GameInstance : MonoBehaviour
     public int fruteTime;
     public bool fruitSpawned = false;
     public int currentSkynID;
+    List<int> mojeLeveli = new List<int>();
+    
 
     [HideInInspector]
     public List<int> skinsIds;
     // Start is called before the first frame update
     void Start()
     {
+        foreach (int level in levels)
+        {
+            mojeLeveli.Add(level);
+        }
         if (gi == null)
         {
             gi = this;
@@ -77,10 +83,12 @@ public class GameInstance : MonoBehaviour
             HP = 5;
         }
 
-        fruteTimer += Time.deltaTime;
-        if (fruteTimer> fruteTime && fruitSpawned == false && Spawn.countOfAllBalls > 0)
+        if(!fruitSpawned) fruteTimer += Time.deltaTime;
+
+        if (fruteTimer> fruteTime && fruitSpawned == false &&  mojeLeveli.Contains(SceneManager.GetActiveScene().buildIndex) )
         {
             SpawnFruit();
+            fruteTimer = 0;
         }
     }
 
