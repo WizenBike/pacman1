@@ -416,6 +416,7 @@ MonoBehaviour:
   shuffling: 0
   svetlo: {fileID: 237146482}
   machine: {fileID: 1026280409}
+  text: {fileID: 1888034448}
 --- !u!1 &1008627364
 GameObject:
   m_ObjectHideFlags: 0

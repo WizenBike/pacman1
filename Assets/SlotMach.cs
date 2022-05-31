@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class SlotMach : MonoBehaviour
@@ -16,7 +17,8 @@ public class SlotMach : MonoBehaviour
     public bool shuffling = false;
     public SpriteRenderer svetlo;
     public Animator machine;
- 
+    public TMP_Text text;
+    
     
 
 
@@ -45,6 +47,7 @@ public class SlotMach : MonoBehaviour
             shafle.Add(skyn);
         }
 
+        text.text = Spawn.score.ToString();
 
     }
 
@@ -92,8 +95,10 @@ public class SlotMach : MonoBehaviour
 
         print(GameInstance.gi.skinsIds + " Labla ???");
         print(skinyNaVyber[rand].index + " ???");
-
-        GameInstance.gi.AddSkin(skinyNaVyber[rand].index);
+        if (!GameInstance.gi.skinsIds.Contains(skinyNaVyber[rand].index))
+        {
+            GameInstance.gi.AddSkin(skinyNaVyber[rand].index);
+        }
         ChangeCollor(skinyNaVyber[rand].rarity);
 
 
