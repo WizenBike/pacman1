@@ -8,14 +8,14 @@ public class SkinAnimations : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
         animation = GetComponent<Animator>();
-        animation.SetInteger("skinIndex",GameInstance.gi.currentSkynID);
+        animation.SetInteger("skinIndex", GameInstance.gi.currentSkynID);
         print(GameInstance.gi.currentSkynID + "AHOOOOOOOOOOOOOOOOOJ");
     }
     void Start()
     {
-        
+
+       
     }
 
     // Update is called once per frame
