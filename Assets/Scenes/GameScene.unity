@@ -681,10 +681,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySkins: []
   HP: 5
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 0100000004000000
-  level: 0
+  level: 1
   levelIndex: 0
   fruteTimer: 0
   fruteTime: 5
@@ -1870,6 +1871,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 931384506300904831, guid: b0da032102b11124b8c7151ca86c90d3,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 931384506300904831, guid: b0da032102b11124b8c7151ca86c90d3,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 931384506560436301, guid: b0da032102b11124b8c7151ca86c90d3,
         type: 3}
       propertyPath: m_RootOrder
