@@ -48,7 +48,7 @@ public class SlotMach : MonoBehaviour
         }
 
         text.text = Spawn.score.ToString();
-
+        shuffling = false;
     }
 
     int FindID(Sprite skin)
@@ -103,7 +103,8 @@ public class SlotMach : MonoBehaviour
 
 
         machine.SetBool("pressed", false);
-        shuffling = false;
+        Spawn.score = 0;
+        
     }
     // Update is called once per frame
     void Update()

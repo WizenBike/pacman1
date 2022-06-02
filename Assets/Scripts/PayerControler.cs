@@ -10,6 +10,8 @@ public class PayerControler : MonoBehaviour
     public Collide collisionWithGhost;
     public Collide CollideWithPower;
     public GameObject startNode;
+    public SpriteRenderer sr;
+    public Transform sprite;
   
 
 
@@ -18,6 +20,7 @@ public class PayerControler : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
         mc = GetComponent<MovemantControler>();
         Instance = this;
        
@@ -48,19 +51,19 @@ public class PayerControler : MonoBehaviour
 
         if (mc.direction == "right")
         {
-            transform.rotation = Quaternion.Euler(0,0,0); 
+            FlipR();
         }
         else if (mc.direction == "left")
         {
-            transform.rotation = Quaternion.Euler(0, 0, 180);
+            FlipL();
         }
         else if (mc.direction == "up")
         {
-            transform.rotation = Quaternion.Euler(0, 0,  90);
+            FlipUp();
         }
         else if (mc.direction == "down")
         {
-            transform.rotation = Quaternion.Euler(0, 0, 270);
+            FlipDown();
         }
     }
 
@@ -80,5 +83,26 @@ public class PayerControler : MonoBehaviour
             transform.position = startNode.transform.position;
             mc.currentNode = startNode;
         }
+    }
+    public void FlipL()
+    {
+        
+      
+        
+          transform.rotation = Quaternion.Euler(0, 180, 0);
+           
+        
+    }
+    public void FlipR()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0); 
+    }
+    public void FlipUp()
+    {
+        transform.rotation = Quaternion.Euler(0,0,90);
+    }
+    public void FlipDown()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, -90);
     }
 }

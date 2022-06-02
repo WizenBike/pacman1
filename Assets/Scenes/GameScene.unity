@@ -1871,6 +1871,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 931384506300904831, guid: b0da032102b11124b8c7151ca86c90d3,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 931384506300904831, guid: b0da032102b11124b8c7151ca86c90d3,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 931384506560436301, guid: b0da032102b11124b8c7151ca86c90d3,
         type: 3}
       propertyPath: m_RootOrder

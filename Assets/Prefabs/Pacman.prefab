@@ -327,6 +327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startNode: {fileID: 0}
+  sr: {fileID: 931384506300904831}
+  sprite: {fileID: 931384506300904830}
   mc: {fileID: 0}
 --- !u!114 &23856550814890579
 MonoBehaviour:
