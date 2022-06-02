@@ -344,7 +344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: Win a skin!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ab523a7431f8d489c42cef27528577, type: 2}
   m_sharedMaterial: {fileID: 3615806367437438448, guid: b4ab523a7431f8d489c42cef27528577,

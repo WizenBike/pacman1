@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene 2.unity
     guid: 8d37441edb28b28408aa9b610d7eccf3
+  - enabled: 1
+    path: Assets/Scenes/help.unity
+    guid: 6ea0038bd7042f845a7650481a729350
+  - enabled: 1
+    path: Assets/Scenes/help2.unity
+    guid: 12e62259292cb864e83887996878e55b
+  - enabled: 1
+    path: Assets/Scenes/slothelp.unity
+    guid: 1b6878a511549cc4a9cbf14b769089e6
   m_configObjects: {}
