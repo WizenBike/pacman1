@@ -9,6 +9,7 @@ public class EnemyPink : EnemyControler
     public float stayInHomeTime;
     public bool stayInHome;
     float timeS;
+    public AudioSource eyeP;
 
 
 
@@ -49,6 +50,12 @@ public class EnemyPink : EnemyControler
     protected override void goHome()
     {
         
+
+        if (!eyeP.isPlaying && !body.active)
+        {
+            eyeP.Play();
+        }
+
         if (transform.position == startNode.transform.position)
         {
            
@@ -63,8 +70,10 @@ public class EnemyPink : EnemyControler
         {
             if (body.active != true)
             {
+
                 mc.speed /= gainSpeedOnDeath;
                 body.SetActive(true);
+                eyeP.Pause();
             }
             ghostState = GhostStates.goOutOfHome;
             

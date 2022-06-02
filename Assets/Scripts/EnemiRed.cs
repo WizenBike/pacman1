@@ -7,6 +7,7 @@ public class EnemiRed : EnemyControler
     public int pointsToSwitchOffScatter;
     public float stayInHomeTime;
     public bool stayInHome;
+    public AudioSource eyeR;
     float timeS;
 
 
@@ -41,6 +42,10 @@ public class EnemiRed : EnemyControler
     protected override void goHome()
     {
 
+        if (!eyeR.isPlaying && !body.active)
+        {
+            eyeR.Play();
+        }
         if (transform.position == startNode.transform.position)
         {
             
@@ -54,6 +59,7 @@ public class EnemiRed : EnemyControler
             {
                 mc.speed /= gainSpeedOnDeath;
                 body.SetActive(true);
+                eyeR.Pause();
             }
             ghostState = GhostStates.goOutOfHome;
            
