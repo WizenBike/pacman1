@@ -1284,6 +1284,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823373518}
   m_CullTransparentMesh: 1
+--- !u!1 &851833192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851833194}
+  - component: {fileID: 851833193}
+  m_Layer: 0
+  m_Name: ManagerHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &851833193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851833192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySkins:
+  - skin: {fileID: 21300000, guid: 134c7ece66517024588df2eb8e9a95ed, type: 3}
+    index: 0
+    rarity: zaklad
+  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
+    index: 1
+    rarity: comon
+  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
+    index: 2
+    rarity: comon
+  HP: 5
+  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
+  levels: 05000000
+  level: 0
+  levelIndex: 0
+  fruteTimer: 0
+  fruteTime: 5
+  fruitSpawned: 0
+  currentSkynID: 0
+  skinsIds: 
+--- !u!4 &851833194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851833192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866132036
 GameObject:
   m_ObjectHideFlags: 0

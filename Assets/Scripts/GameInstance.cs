@@ -85,7 +85,7 @@ public class GameInstance : MonoBehaviour
 
         if(!fruitSpawned) fruteTimer += Time.deltaTime;
 
-        if (fruteTimer> fruteTime && fruitSpawned == false &&  mojeLeveli.Contains(SceneManager.GetActiveScene().buildIndex) )
+        if (fruteTimer> fruteTime && fruitSpawned == false && SceneManager.GetActiveScene().buildIndex == 5 )
         {
             SpawnFruit();
             fruteTimer = 0;
@@ -111,7 +111,7 @@ public class GameInstance : MonoBehaviour
             levelIndex ++; 
         }
         
-        SceneManager.LoadScene(4); 
+        SceneManager.LoadScene(5); 
     }
     public void SpawnFruit()
     {
