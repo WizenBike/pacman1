@@ -62,6 +62,7 @@ public class EnemyControler : MonoBehaviour
     private void Awake()
     {
         mc = gameObject.GetComponent<MovemantControler>();
+        mc.currentNode = startNode;
     }
 
     // Start is called before the first frame update
@@ -102,6 +103,7 @@ public class EnemyControler : MonoBehaviour
             mc.currentNode = startNode;
 
         }
+        
         GetStartPos();
 
     }
