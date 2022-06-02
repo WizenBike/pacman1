@@ -712,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySkins: []
   HP: 5
   Fruit: {fileID: 0}
   levels: 0100000004000000
@@ -2220,7 +2221,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 11e0c5c88a542a742a0c8e0773c9f607, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.383
+  m_Volume: 0.064
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3152,7 +3153,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d455d463a20f8a844a00bdedab7238d1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.299
+  m_Volume: 0.177
   m_Pitch: 1
   Loop: 1
   Mute: 0
