@@ -9,6 +9,7 @@ public class EnemiBlue : EnemyControler
     public GameObject RedGhost;
     public float stayInHomeTime;
     public bool stayInHome;
+    public AudioSource eyeB;
     float timeS;
 
     protected override void GetStartPos()
@@ -43,6 +44,10 @@ public class EnemiBlue : EnemyControler
     }
     protected override void goHome()
     {
+        if (!eyeB.isPlaying && !body.active)
+        {
+            eyeB.Play();
+        }
         print("Blue goin to go");
         if (transform.position == startNode.transform.position)
         {
@@ -57,6 +62,7 @@ public class EnemiBlue : EnemyControler
             {
                 mc.speed /= gainSpeedOnDeath;
                 body.SetActive(true);
+                eyeB.Pause();
             }
             
             ghostState = GhostStates.goOutOfHome;

@@ -47,7 +47,7 @@ public class MenuMovement : MonoBehaviour
             ruzovy.DOMove(new Vector2(xEnd, ruzovy.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
             pacman.DOMove(new Vector2(xEnd, pacman.position.y), time).SetEase(Ease.Linear);
-            pacman.GetComponent<SpriteRenderer>().flipX = true;
+            pacman.GetComponent<SpriteRenderer>().flipX = false;
             yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xEnd, cerveny.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(time);
@@ -55,7 +55,7 @@ public class MenuMovement : MonoBehaviour
             //Cesta s5
             ruzovy.DOMove(new Vector2(xStart, ruzovy.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
-            pacman.GetComponent<SpriteRenderer>().flipX = false;
+            pacman.GetComponent<SpriteRenderer>().flipX = true;
             pacman.DOMove(new Vector2(xStart, pacman.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xStart, cerveny.position.y), time).SetEase(Ease.Linear);
@@ -65,6 +65,7 @@ public class MenuMovement : MonoBehaviour
             modrystred.DOMove(new Vector2(xEndstred, modrystred.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
             pacmanstred.DOMove(new Vector2(xEnd, pacmanstred.position.y), time).SetEase(Ease.Linear);
+            pacmanstred.GetComponent<SpriteRenderer>().flipX = true;
             yield return new WaitForSeconds(time);
 
             modrystred.DOMove(new Vector2(xStart, modrystred.position.y), time).SetEase(Ease.Linear);
@@ -75,6 +76,7 @@ public class MenuMovement : MonoBehaviour
 
 
             pacmanstred.DOMove(new Vector2(xEnd, pacmanstred.position.y), time).SetEase(Ease.Linear);
+            pacmanstred.GetComponent<SpriteRenderer>().flipX = true;
             yield return new WaitForSeconds(delay);
             modrystred.DOMove(new Vector2(xEndstred, modrystred.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
@@ -82,7 +84,7 @@ public class MenuMovement : MonoBehaviour
             yield return new WaitForSeconds(time);
 
             pacmanstred.DOMove(new Vector2(xStart, pacmanstred.position.y), time).SetEase(Ease.Linear);
-            pacmanstred.GetComponent<SpriteRenderer>().flipX = true;
+            pacmanstred.GetComponent<SpriteRenderer>().flipX = false;
             yield return new WaitForSeconds(delay);
             modrystred.DOMove(new Vector2(xStart, modrystred.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
@@ -90,19 +92,21 @@ public class MenuMovement : MonoBehaviour
             yield return new WaitForSeconds(time);
 
             pacmanstred.DOMove(new Vector2(xEnd, pacmanstred.position.y), time).SetEase(Ease.Linear);
+            pacmanstred.GetComponent<SpriteRenderer>().flipX = true;
             yield return new WaitForSeconds(delay);
             oci.DOMove(new Vector2(xEndstred, oci.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(time);
 
 
             pacmanstred.DOMove(new Vector2(xStart, pacmanstred.position.y), time).SetEase(Ease.Linear);
-            pacmanstred.GetComponent<SpriteRenderer>().flipX = true;
+            pacmanstred.GetComponent<SpriteRenderer>().flipX = false;
             yield return new WaitForSeconds(delay);
             oci.DOMove(new Vector2(xStart, oci.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(time);
 
 
             pacman.DOMove(new Vector2(xEnd, pacman.position.y), time).SetEase(Ease.Linear);
+            pacman.GetComponent<SpriteRenderer>().flipX = false;
             yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xEnd, cerveny.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);
@@ -114,7 +118,7 @@ public class MenuMovement : MonoBehaviour
             yield return new WaitForSeconds(time);
 
             pacman.DOMove(new Vector2(xStart, pacman.position.y), time).SetEase(Ease.Linear);
-            pacmanstred.GetComponent<SpriteRenderer>().flipX = true;
+            pacman.GetComponent<SpriteRenderer>().flipX = true;
             yield return new WaitForSeconds(delay);
             cerveny.DOMove(new Vector2(xStart, cerveny.position.y), time).SetEase(Ease.Linear);
             yield return new WaitForSeconds(delay);

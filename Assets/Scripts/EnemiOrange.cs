@@ -8,6 +8,7 @@ public class EnemiOrange : EnemyControler
     public GameObject Pointer;
     public float stayInHomeTime;
     public bool stayInHome;
+    public AudioSource eyeO;
     float timeS;
 
 
@@ -50,6 +51,10 @@ public class EnemiOrange : EnemyControler
 
     protected override void goHome()
     {
+        if (!eyeO.isPlaying && !body.active)
+        {
+            eyeO.Play();
+        }
 
         if (transform.position == startNode.transform.position)
         {
@@ -67,6 +72,7 @@ public class EnemiOrange : EnemyControler
             {
                 mc.speed /= gainSpeedOnDeath;
                 body.SetActive(true);
+                eyeO.Pause();
             }
             ghostState = GhostStates.goOutOfHome;
            

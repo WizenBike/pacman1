@@ -16,7 +16,7 @@ public class SoundAsset
         if (clip == null) return 0f;
         audioSource.clip = this.clip;
         audioSource.volume = this.volume;
-        audioSource.loop = true;
+        audioSource.loop = false;
         audioSource.Play();
         return clip.length;
     }
