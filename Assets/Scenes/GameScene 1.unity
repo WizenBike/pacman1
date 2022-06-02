@@ -870,10 +870,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 360953614, guid: b0da032102b11124b8c7151ca86c90d3, type: 3}
-      propertyPath: sund
-      value: 
-      objectReference: {fileID: 585831805}
     - target: {fileID: 931384506560436301, guid: b0da032102b11124b8c7151ca86c90d3,
         type: 3}
       propertyPath: m_RootOrder
@@ -9395,7 +9391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 524, y: -8}
+  m_AnchoredPosition: {x: 524, y: -8.700012}
   m_SizeDelta: {x: 194.0778, y: 37.1904}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1431737563
