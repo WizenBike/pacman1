@@ -21,9 +21,11 @@ public class MenuMovement : MonoBehaviour
     public Transform modrystred;
     public Transform god;
     public Transform oci;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         StartCoroutine(StartAnim());
     }
     IEnumerator StartAnim()
