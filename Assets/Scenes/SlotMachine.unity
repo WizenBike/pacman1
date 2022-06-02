@@ -1075,7 +1075,7 @@ MonoBehaviour:
     rarity: comon
   HP: 5
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
-  levels: 0100000004000000
+  levels: 05000000
   level: 0
   levelIndex: 0
   fruteTimer: 0
