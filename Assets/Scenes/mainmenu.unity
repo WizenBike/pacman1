@@ -1323,6 +1323,9 @@ MonoBehaviour:
   - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
     index: 2
     rarity: comon
+  - skin: {fileID: 21300000, guid: 85b59a2d933f31e4a8ce913926b74e3d, type: 3}
+    index: 3
+    rarity: comon
   HP: 5
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 05000000
