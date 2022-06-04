@@ -1284,73 +1284,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823373518}
   m_CullTransparentMesh: 1
---- !u!1 &851833192
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 851833194}
-  - component: {fileID: 851833193}
-  m_Layer: 0
-  m_Name: ManagerHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &851833193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851833192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySkins:
-  - skin: {fileID: 21300000, guid: 134c7ece66517024588df2eb8e9a95ed, type: 3}
-    index: 0
-    rarity: zaklad
-  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
-    index: 1
-    rarity: comon
-  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
-    index: 2
-    rarity: comon
-  - skin: {fileID: 21300000, guid: 85b59a2d933f31e4a8ce913926b74e3d, type: 3}
-    index: 3
-    rarity: comon
-  HP: 5
-  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
-  levels: 05000000
-  level: 0
-  levelIndex: 0
-  fruteTimer: 0
-  fruteTime: 5
-  fruitSpawned: 0
-  currentSkynID: 0
-  skinsIds: 
---- !u!4 &851833194
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851833192}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &866132036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,4 +3714,146 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2098796364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2098796366}
+  - component: {fileID: 2098796365}
+  m_Layer: 0
+  m_Name: ManagerHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2098796365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098796364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySkins:
+  - skin: {fileID: 21300000, guid: 134c7ece66517024588df2eb8e9a95ed, type: 3}
+    index: 0
+    rarity: zaklad
+  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
+    index: 1
+    rarity: comon
+  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
+    index: 2
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 85b59a2d933f31e4a8ce913926b74e3d, type: 3}
+    index: 3
+    rarity: comon
+  - skin: {fileID: 21300000, guid: fbad3d09ab218b34ba7b768d9ab86bdc, type: 3}
+    index: 4
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 1386c5c9ec605374ab1f8cd9a98d6ede, type: 3}
+    index: 5
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 7109959743418344abe18510eb9e0149, type: 3}
+    index: 6
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 61d763f626e933845a557a196b5521a4, type: 3}
+    index: 7
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 8a1769e9cad9a444aa8d5081b5266b32, type: 3}
+    index: 8
+    rarity: comon
+  - skin: {fileID: 21300000, guid: e3b1de02123bbbc4cae4ffe483b281fa, type: 3}
+    index: 9
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 4196209a78911e749aa9c55fa2dfd656, type: 3}
+    index: 10
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 4a96231fff381a24185cc59736e01cad, type: 3}
+    index: 11
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 6c4e94c6b40f4ce4ca7aad3ecfd850f9, type: 3}
+    index: 12
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 64371c8abd9814f4aa81201d2aa798d5, type: 3}
+    index: 13
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 4fd8aa6bf10416940b3c75cd5f6e5203, type: 3}
+    index: 14
+    rarity: comon
+  - skin: {fileID: 21300000, guid: c76b807ee970e644bb53369d033e71d6, type: 3}
+    index: 15
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 5ae26b9d2f7ede147a9a8936fb04042d, type: 3}
+    index: 16
+    rarity: comon
+  - skin: {fileID: 21300000, guid: e8015299647000b468cea79ba91dcf89, type: 3}
+    index: 17
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 41e9ea49b12f3c747b6546535cb79515, type: 3}
+    index: 18
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 546b7a35f657bc84cb1107a945d97904, type: 3}
+    index: 19
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 6c39bd10e9a14de428779ed52c9066f7, type: 3}
+    index: 20
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 5e69b76712935c2479d76eb6642ea3ba, type: 3}
+    index: 21
+    rarity: comon
+  - skin: {fileID: 21300000, guid: e87c3b5cc43b71f42a8557bfd709ecd7, type: 3}
+    index: 22
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 8fbd80e489452fd469cae0e182708583, type: 3}
+    index: 23
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 82b5190d45bf0124599854900ddebc8f, type: 3}
+    index: 24
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 1428e1439799839438e0845a62f1faa9, type: 3}
+    index: 25
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 0b1f5743a401bbb46af76dfd8a158523, type: 3}
+    index: 26
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 44f4ce9c65302ac44a4abac64985a7a2, type: 3}
+    index: 27
+    rarity: comon
+  - skin: {fileID: 21300000, guid: 2c5bf28224b575347b6626d088b934c1, type: 3}
+    index: 28
+    rarity: comon
+  HP: 5
+  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
+  levels: 05000000
+  level: 0
+  levelIndex: 0
+  fruteTimer: 0
+  fruteTime: 5
+  fruitSpawned: 0
+  currentSkynID: 0
+  skinsIds: 
+--- !u!4 &2098796366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098796364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
