@@ -311,7 +311,7 @@ MonoBehaviour:
   m_text: 'Senior programmer:
 
 
-    Andrej Mizu aka Andomiz'
+    Andrej Mizu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ab523a7431f8d489c42cef27528577, type: 2}
   m_sharedMaterial: {fileID: 3615806367437438448, guid: b4ab523a7431f8d489c42cef27528577,
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.023529414, g: 0.03529412, b: 0.48627454, a: 1}
+  m_Color: {r: 0.003921569, g: 0.003921569, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -907,23 +907,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game design:
-
-
-    Roman Studenc aka Wizenbike
-
-
-    Programming assistant:
-
-
-    Alex
-    Juhos aka Horthy Miklos
-
-
-    Art
-
-
-    Alex Horvath aka Plexo'
+  m_text: "Game design:\n\nRoman Studenc \n\nProgramming assistant:\n\nAlex Juhos
+    \n\nArt\n\nAlex Horvath"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ab523a7431f8d489c42cef27528577, type: 2}
   m_sharedMaterial: {fileID: 3615806367437438448, guid: b4ab523a7431f8d489c42cef27528577,
@@ -1141,7 +1126,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.023529414, g: 0.03529412, b: 0.48627454, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
