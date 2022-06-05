@@ -1067,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
@@ -2115,7 +2115,7 @@ PrefabInstance:
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
@@ -8960,7 +8960,7 @@ PrefabInstance:
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
@@ -10135,6 +10135,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1590307945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1604795746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604795748}
+  - component: {fileID: 1604795747}
+  m_Layer: 0
+  m_Name: ManagerHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1604795747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604795746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySkins: []
+  HP: 5
+  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
+  levels: 0100000004000000
+  level: 1
+  levelIndex: 0
+  fruteTimer: 0
+  fruteTime: 5
+  fruitSpawned: 0
+  currentSkynID: 0
+  skinsIds: 
+--- !u!4 &1604795748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604795746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1626527598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16355,70 +16410,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 77260365811591369}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1741686630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1741686632}
-  - component: {fileID: 1741686631}
-  m_Layer: 0
-  m_Name: ManagerHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1741686631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741686630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySkins:
-  - skin: {fileID: 21300000, guid: 134c7ece66517024588df2eb8e9a95ed, type: 3}
-    index: 0
-    rarity: zaklad
-  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
-    index: 1
-    rarity: comon
-  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
-    index: 2
-    rarity: comon
-  HP: 5
-  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
-  levels: 05000000
-  level: 2
-  levelIndex: 0
-  fruteTimer: 0
-  fruteTime: 5
-  fruitSpawned: 0
-  currentSkynID: 0
-  skinsIds: 
---- !u!4 &1741686632
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741686630}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 36
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1796239175
 GameObject:
   m_ObjectHideFlags: 0
