@@ -62,17 +62,11 @@ public class EnemyControler : MonoBehaviour
     private void Awake()
     {
         mc = gameObject.GetComponent<MovemantControler>();
-        mc.currentNode = startNode;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
-        scatterDuration = 7.5f - GameInstance.gi.level * 0.5f;
-        scatterDuration = Mathf.Clamp(scatterDuration, 4, 7.5f);
-        scaredDuration = 5 - GameInstance.gi.level * 0.5f;
-        scaredDuration = Mathf.Clamp(scaredDuration, 0, 5);
         _anim = GetComponent<Animator>();
        
         PayerControler.Instance.CollideWithPower += () => {
@@ -103,7 +97,6 @@ public class EnemyControler : MonoBehaviour
             mc.currentNode = startNode;
 
         }
-        
         GetStartPos();
 
     }

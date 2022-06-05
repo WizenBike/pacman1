@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/dead.unity
     guid: 555a9799d9f9ae94786ece084340607a
   - enabled: 1
-    path: Assets/Scenes/SlotMachine.unity
-    guid: 79663f603a139e04bb0eeabf2f03f478
-  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 017bb0af22bc6be4382dc7cc85b2a5ce
   - enabled: 1
