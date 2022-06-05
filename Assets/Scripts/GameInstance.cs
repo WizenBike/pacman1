@@ -51,10 +51,10 @@ public class GameInstance : MonoBehaviour
 
         if (!PlayerPrefs.HasKey("skins"))
         {
-            PlayerPrefs.SetString("skins", "");
+            PlayerPrefs.SetString("skins", "0 ");
         }
 
-        PlayerPrefs.SetString("skins", "0");
+        
 
 
 
@@ -85,7 +85,7 @@ public class GameInstance : MonoBehaviour
 
         if(!fruitSpawned) fruteTimer += Time.deltaTime;
 
-        if (fruteTimer> fruteTime && fruitSpawned == false &&  mojeLeveli.Contains(SceneManager.GetActiveScene().buildIndex) )
+        if (fruteTimer> fruteTime && fruitSpawned == false && SceneManager.GetActiveScene().buildIndex == 5 )
         {
             SpawnFruit();
             fruteTimer = 0;
@@ -111,7 +111,7 @@ public class GameInstance : MonoBehaviour
             levelIndex ++; 
         }
         
-        SceneManager.LoadScene(levels[levelIndex]); 
+        SceneManager.LoadScene(5); 
     }
     public void SpawnFruit()
     {
@@ -124,13 +124,16 @@ public class GameInstance : MonoBehaviour
         string[] stringTexts;
         if (PlayerPrefs.HasKey("skins"))
         {
-            stringTexts = PlayerPrefs.GetString("skins").Split(" ");
+            Debug.Log(PlayerPrefs.GetString("skins"));
+            stringTexts = PlayerPrefs.GetString("skins").Split(" " , System.StringSplitOptions.RemoveEmptyEntries);
 
             List<int> ids = new List<int>();
 
             foreach (string id in stringTexts)
             {
+                Debug.Log(id);
                 ids.Add(int.Parse(id));
+              
             }
 
             return ids;
@@ -143,6 +146,7 @@ public class GameInstance : MonoBehaviour
 
     public void AddSkin(int id)
     {
+        Debug.Log("Pridavam " + id);
         skinsIds.Add(id);
     }
 
@@ -160,6 +164,7 @@ public class GameInstance : MonoBehaviour
         foreach (int i in skinsIds)
         {
             s += " " +  i.ToString();
+            Debug.Log(i);
         }
 
         return s;
