@@ -68,13 +68,13 @@ public class EnemyControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        _anim = GetComponent<Animator>();
         scatterDuration = 7.5f - GameInstance.gi.level * 0.5f;
         scatterDuration = Mathf.Clamp(scatterDuration, 4, 7.5f);
         scaredDuration = 5 - GameInstance.gi.level * 0.5f;
         scaredDuration = Mathf.Clamp(scaredDuration, 0, 5);
-        _anim = GetComponent<Animator>();
-       
+
+
         PayerControler.Instance.CollideWithPower += () => {
             if (ghostState != GhostStates.goHome && ghostState != GhostStates.goOutOfHome)
             {

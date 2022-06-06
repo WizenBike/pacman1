@@ -24,7 +24,7 @@ public class GameInstance : MonoBehaviour
     public float fruteTimer;
     public int fruteTime;
     public bool fruitSpawned = false;
-    public int currentSkynID;
+    public int currentSkynID = 0;
     List<int> mojeLeveli = new List<int>();
     
 
@@ -54,9 +54,10 @@ public class GameInstance : MonoBehaviour
             PlayerPrefs.SetString("skins", "0 ");
         }
 
-        
 
 
+        fruteTimer = 0;
+        fruitSpawned = false;
 
         skinsIds = GetSkinsIDS();
        
@@ -83,7 +84,7 @@ public class GameInstance : MonoBehaviour
             HP = 5;
         }
 
-        if(!fruitSpawned) fruteTimer += Time.deltaTime;
+        if(!fruitSpawned && SceneManager.GetActiveScene().buildIndex == 5) fruteTimer += Time.deltaTime;
 
         if (fruteTimer> fruteTime && fruitSpawned == false && SceneManager.GetActiveScene().buildIndex == 5 )
         {
@@ -94,11 +95,13 @@ public class GameInstance : MonoBehaviour
 
     public void Lose()
     {
+        fruteTimer = 0;
         fruitSpawned = false;
         SceneManager.LoadScene(0);
     }
     public void Win() 
     {
+        fruteTimer = 0;
         fruitSpawned = false;
         level++;
         print("U WON");
