@@ -258,70 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42371825}
   m_CullTransparentMesh: 1
---- !u!1 &404368491
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 404368493}
-  - component: {fileID: 404368492}
-  m_Layer: 0
-  m_Name: ManagerHolder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &404368492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404368491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySkins:
-  - skin: {fileID: 21300000, guid: 134c7ece66517024588df2eb8e9a95ed, type: 3}
-    index: 0
-    rarity: zaklad
-  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
-    index: 1
-    rarity: comon
-  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
-    index: 2
-    rarity: comon
-  HP: 5
-  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
-  levels: 05000000
-  level: 0
-  levelIndex: 0
-  fruteTimer: 0
-  fruteTime: 5
-  fruitSpawned: 0
-  currentSkynID: 0
-  skinsIds: 
---- !u!4 &404368493
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404368491}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453799886
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891670813
@@ -986,6 +922,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1269414916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269414918}
+  - component: {fileID: 1269414917}
+  m_Layer: 0
+  m_Name: ManagerHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1269414917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269414916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dc38a3a3563d144bf77e8001a5e6ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySkins:
+  - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
+    index: 1
+    rarity: comon
+  - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
+    index: 2
+    rarity: comon
+  HP: 5
+  Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
+  levels: 0100000004000000
+  level: 0
+  levelIndex: 0
+  fruteTimer: 0
+  fruteTime: 5
+  fruitSpawned: 0
+  currentSkynID: 0
+  skinsIds: 
+--- !u!4 &1269414918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269414916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -2.6, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430354767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1041,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1640260553
 GameObject:
@@ -1212,7 +1209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 0
-  ct: {fileID: 1864990326}
 --- !u!1 &1864990324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1221,7 @@ GameObject:
   - component: {fileID: 1864990327}
   - component: {fileID: 1864990326}
   m_Layer: 5
-  m_Name: TextOFColor
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,18 +1647,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1814107203}
-        m_TargetAssemblyTypeName: SkinStand, Assembly-CSharp
-        m_MethodName: Klick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1814107203}
         m_TargetAssemblyTypeName: SkinStand, Assembly-CSharp
         m_MethodName: Pick
