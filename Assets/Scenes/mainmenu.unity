@@ -3757,10 +3757,10 @@ MonoBehaviour:
     rarity: zaklad
   - skin: {fileID: 21300000, guid: cf0285bd37a6eae45bb59237cab65ed5, type: 3}
     index: 1
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
     index: 2
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 85b59a2d933f31e4a8ce913926b74e3d, type: 3}
     index: 3
     rarity: comon
@@ -3781,22 +3781,22 @@ MonoBehaviour:
     rarity: comon
   - skin: {fileID: 21300000, guid: e3b1de02123bbbc4cae4ffe483b281fa, type: 3}
     index: 9
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 4196209a78911e749aa9c55fa2dfd656, type: 3}
     index: 10
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 4a96231fff381a24185cc59736e01cad, type: 3}
     index: 11
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 6c4e94c6b40f4ce4ca7aad3ecfd850f9, type: 3}
     index: 12
     rarity: comon
   - skin: {fileID: 21300000, guid: 64371c8abd9814f4aa81201d2aa798d5, type: 3}
     index: 13
-    rarity: comon
+    rarity: legendary
   - skin: {fileID: 21300000, guid: 4fd8aa6bf10416940b3c75cd5f6e5203, type: 3}
     index: 14
-    rarity: comon
+    rarity: legendary
   - skin: {fileID: 21300000, guid: c76b807ee970e644bb53369d033e71d6, type: 3}
     index: 15
     rarity: comon
@@ -3808,13 +3808,13 @@ MonoBehaviour:
     rarity: comon
   - skin: {fileID: 21300000, guid: 41e9ea49b12f3c747b6546535cb79515, type: 3}
     index: 18
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 546b7a35f657bc84cb1107a945d97904, type: 3}
     index: 19
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 6c39bd10e9a14de428779ed52c9066f7, type: 3}
     index: 20
-    rarity: comon
+    rarity: legendary
   - skin: {fileID: 21300000, guid: 5e69b76712935c2479d76eb6642ea3ba, type: 3}
     index: 21
     rarity: comon
@@ -3826,19 +3826,19 @@ MonoBehaviour:
     rarity: comon
   - skin: {fileID: 21300000, guid: 82b5190d45bf0124599854900ddebc8f, type: 3}
     index: 24
-    rarity: comon
+    rarity: rare
   - skin: {fileID: 21300000, guid: 1428e1439799839438e0845a62f1faa9, type: 3}
     index: 25
-    rarity: comon
+    rarity: legendary
   - skin: {fileID: 21300000, guid: 0b1f5743a401bbb46af76dfd8a158523, type: 3}
     index: 26
-    rarity: comon
+    rarity: legendary
   - skin: {fileID: 21300000, guid: 44f4ce9c65302ac44a4abac64985a7a2, type: 3}
     index: 27
-    rarity: comon
+    rarity: legendary
   - skin: {fileID: 21300000, guid: 2c5bf28224b575347b6626d088b934c1, type: 3}
     index: 28
-    rarity: comon
+    rarity: legendary
   HP: 2
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 05000000
@@ -3848,7 +3848,7 @@ MonoBehaviour:
   fruteTime: 5
   fruitSpawned: 0
   currentSkynID: 0
-  scaredTime: 5
+  scaredTime: 8
   skinsIds: 
 --- !u!4 &2098796366
 Transform:

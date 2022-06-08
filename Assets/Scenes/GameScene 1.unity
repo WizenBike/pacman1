@@ -16341,16 +16341,16 @@ MonoBehaviour:
   - skin: {fileID: 21300000, guid: f46dee7ee81558343a6032f9dda52399, type: 3}
     index: 2
     rarity: comon
-  HP: 5
+  HP: 2
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 05000000
-  level: 2
+  level: 0
   levelIndex: 0
   fruteTimer: 0
   fruteTime: 5
   fruitSpawned: 0
   currentSkynID: 0
-  scaredTime: 5
+  scaredTime: 8
   skinsIds: 
 --- !u!4 &1741686632
 Transform:

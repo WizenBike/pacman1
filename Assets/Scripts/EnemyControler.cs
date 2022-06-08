@@ -71,8 +71,8 @@ public class EnemyControler : MonoBehaviour
 
         scatterDuration = 7f - 2*GameInstance.gi.level;
         scatterDuration = Mathf.Clamp(scatterDuration, 4, 7.5f);
-        scaredDuration = 5 - GameInstance.gi.level * 2f;
-        scaredDuration = Mathf.Clamp(scaredDuration, 0.5f, 5);
+        scaredDuration = 8 - GameInstance.gi.level * 2f;
+        scaredDuration = Mathf.Clamp(scaredDuration, 0.5f, 8);
         _anim = GetComponent<Animator>();
         GameInstance.gi.scaredTime = scaredDuration;
        

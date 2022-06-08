@@ -80,13 +80,13 @@ public class GameInstance : MonoBehaviour
         {
             Lose();
             levelIndex = 0;
-            level = 1;
-            HP = 5;
+            level = 0;
+            HP = 2;
         }
 
-        if(!fruitSpawned) fruteTimer += Time.deltaTime;
+        if(!fruitSpawned && SceneManager.GetActiveScene().buildIndex == 4) fruteTimer += Time.deltaTime;
 
-        if (fruteTimer> fruteTime && fruitSpawned == false && SceneManager.GetActiveScene().buildIndex == 5 )
+        if (fruteTimer> fruteTime && fruitSpawned == false && SceneManager.GetActiveScene().buildIndex == 4 )
         {
             SpawnFruit();
             fruteTimer = 0;
@@ -96,10 +96,12 @@ public class GameInstance : MonoBehaviour
     public void Lose()
     {
         fruitSpawned = false;
+        fruteTimer = 0;
         SceneManager.LoadScene("dead");
     }
     public void Win() 
     {
+        fruteTimer = 0;
         fruitSpawned = false;
         level++;
         print("U WON");

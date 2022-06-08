@@ -90,7 +90,7 @@ public class SlotMach : MonoBehaviour
                 skinyNaVyber.Add(mojSkinu);
             }
         }
-        int rand = Random.Range(0, skinyNaVyber.Count );
+        int rand = Random.Range(0, skinyNaVyber.Count -1);
         sr.sprite = skinyNaVyber[rand].skin;
 
         print(GameInstance.gi.skinsIds + " Labla ???");
@@ -99,7 +99,7 @@ public class SlotMach : MonoBehaviour
         {
             GameInstance.gi.AddSkin(skinyNaVyber[rand].index);
         }
-        ChangeCollor(skinyNaVyber[rand].rarity);
+        ChangeCollor(rarita);
 
 
         machine.SetBool("pressed", false);
@@ -117,13 +117,16 @@ public class SlotMach : MonoBehaviour
         if (Spawn.score >= 1000) score = Spawn.score / 500;
 
         float chance = Random.Range(0, 1000);
-      
+        print(score);
+        print(chance);
         Sprite[] skyns; 
         //61%
         if (chance < 610-score*2)
         {
             Debug.Log("common");
-            rarita = "comon";
+             rarita = "comon"; 
+           
+
         }
         //33%
         else if (chance >= 610-score*2 && chance < 940 - score)
@@ -142,10 +145,11 @@ public class SlotMach : MonoBehaviour
         {
             Debug.Log("mythic");
         }
+        
         if (shuffling == false)
         {
             shuffling = true;
-            StartCoroutine(Shafle("comon"));
+            StartCoroutine(Shafle(rarita));
             
 
         }
@@ -178,23 +182,27 @@ public class SlotMach : MonoBehaviour
 
     public void ChangeCollor(string rarita)
     {
-        
-     if (rarita == "comon")
+        if (rarita == "comon")
      {
-            svetlo.color = new Color(0f,115f,50f,225);     
-     }else if(rarita == "rare")
+            
+            svetlo.color = new Color(11f / 255f, 115f / 255f, 246f / 255f, 1);     
+     }
+        else if(rarita == "rare")
      {
-            svetlo.color = new Color(0f, 50f, 115f, 225);
+            
+            svetlo.color = new Color(9f / 255f, 255f / 255f, 27f / 255f, 1);
      }
      else if(rarita == "legendary")
      {
-            svetlo.color = new Color(119, 119, 119, 225);
+           
+            svetlo.color = new Color(255 / 255f, 247 / 255f, 0 / 255f, 1);
      }
      else 
      {
-            svetlo.color = new Color(255, 19, 0, 225);
+            
+            svetlo.color = new Color(255 / 255f, 19 / 255f, 0 / 255f, 1);
      }
-     
+        
     }
    
 
