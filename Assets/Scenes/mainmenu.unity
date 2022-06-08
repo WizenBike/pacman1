@@ -3839,7 +3839,7 @@ MonoBehaviour:
   - skin: {fileID: 21300000, guid: 2c5bf28224b575347b6626d088b934c1, type: 3}
     index: 28
     rarity: comon
-  HP: 5
+  HP: 2
   Fruit: {fileID: 7721349064428218751, guid: 63bf1429aceed824f863932e2cf35bd3, type: 3}
   levels: 05000000
   level: 0
@@ -3848,6 +3848,7 @@ MonoBehaviour:
   fruteTime: 5
   fruitSpawned: 0
   currentSkynID: 0
+  scaredTime: 5
   skinsIds: 
 --- !u!4 &2098796366
 Transform:

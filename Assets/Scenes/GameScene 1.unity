@@ -1097,7 +1097,7 @@ PrefabInstance:
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.4
+      value: -15.35
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
@@ -1590,8 +1590,8 @@ MonoBehaviour:
   mc: {fileID: 0}
   objectyve: {x: 0, y: 0}
   player: {fileID: 360953611}
-  scatterCooldown: 20
-  scatterDuration: 20
+  scatterCooldown: 15
+  scatterDuration: 7
   time: 0
   timeScatter: 0
   flipped: 0
@@ -2156,7 +2156,7 @@ PrefabInstance:
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.3
+      value: 13.39
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
@@ -3645,8 +3645,8 @@ MonoBehaviour:
   mc: {fileID: 0}
   objectyve: {x: 0, y: 0}
   player: {fileID: 360953611}
-  scatterCooldown: 1
-  scatterDuration: 10
+  scatterCooldown: 15
+  scatterDuration: 7
   time: 0
   timeScatter: 0
   flipped: 0
@@ -4471,8 +4471,8 @@ MonoBehaviour:
   mc: {fileID: 0}
   objectyve: {x: 0, y: 0}
   player: {fileID: 360953611}
-  scatterCooldown: 20
-  scatterDuration: 20
+  scatterCooldown: 15
+  scatterDuration: 7
   time: 0
   timeScatter: 0
   flipped: 0
@@ -8912,12 +8912,12 @@ PrefabInstance:
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.4
+      value: -13.29
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.3
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: 2086275093317447360, guid: 0b799e5b0e6512143bfd21e5e51b2ae2,
         type: 3}
@@ -16212,7 +16212,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 717e97435c8299245997b2c8e64a6659, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.848
+  m_Volume: 0.892
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16350,6 +16350,7 @@ MonoBehaviour:
   fruteTime: 5
   fruitSpawned: 0
   currentSkynID: 0
+  scaredTime: 5
   skinsIds: 
 --- !u!4 &1741686632
 Transform:
@@ -17702,8 +17703,8 @@ MonoBehaviour:
   mc: {fileID: 0}
   objectyve: {x: 0, y: 0}
   player: {fileID: 360953611}
-  scatterCooldown: 10000
-  scatterDuration: 0
+  scatterCooldown: 15
+  scatterDuration: 7
   time: 0
   timeScatter: 0
   flipped: 0
