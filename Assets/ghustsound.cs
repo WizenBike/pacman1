@@ -20,7 +20,7 @@ public class ghustsound : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 5 && scared.isPlaying)
+        if (time > GameInstance.gi.scaredTime && scared.isPlaying)
         {
             scared.Stop();
         }

@@ -20,7 +20,6 @@ public class SkinStand : MonoBehaviour
         //sr.sprite = skyns[GameInstance.gi.skinsIds[skynIndex]];
         foreach (Skin mojSkin in GameInstance.gi.mySkins)
         {
-            Debug.LogError(mojSkin.skin);
             if (GameInstance.gi.skinsIds.Contains(mojSkin.index))
             {
                 Debug.LogError(mojSkin.index + "Naseusem");
@@ -63,7 +62,6 @@ public class SkinStand : MonoBehaviour
     public void Pick()
     {
         GameInstance.gi.currentSkynID = avableSkyns[Index].index;
-        Debug.LogError(avableSkyns[Index].index);
     }
 
    public void LoadSkyn()

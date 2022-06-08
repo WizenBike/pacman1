@@ -69,11 +69,12 @@ public class EnemyControler : MonoBehaviour
     void Start()
     {
 
-        scatterDuration = 7.5f - GameInstance.gi.level * 0.5f;
+        scatterDuration = 7f - 2*GameInstance.gi.level;
         scatterDuration = Mathf.Clamp(scatterDuration, 4, 7.5f);
-        scaredDuration = 5 - GameInstance.gi.level * 0.5f;
-        scaredDuration = Mathf.Clamp(scaredDuration, 0, 5);
+        scaredDuration = 5 - GameInstance.gi.level * 2f;
+        scaredDuration = Mathf.Clamp(scaredDuration, 0.5f, 5);
         _anim = GetComponent<Animator>();
+        GameInstance.gi.scaredTime = scaredDuration;
        
         PayerControler.Instance.CollideWithPower += () => {
             if (ghostState != GhostStates.goHome && ghostState != GhostStates.goOutOfHome)

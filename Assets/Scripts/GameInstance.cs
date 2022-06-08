@@ -26,7 +26,8 @@ public class GameInstance : MonoBehaviour
     public bool fruitSpawned = false;
     public int currentSkynID;
     List<int> mojeLeveli = new List<int>();
-    
+
+    public float scaredTime = 5f;
 
     [HideInInspector]
     public List<int> skinsIds;
@@ -95,7 +96,7 @@ public class GameInstance : MonoBehaviour
     public void Lose()
     {
         fruitSpawned = false;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("dead");
     }
     public void Win() 
     {
@@ -111,7 +112,7 @@ public class GameInstance : MonoBehaviour
             levelIndex ++; 
         }
         
-        SceneManager.LoadScene(5); 
+        SceneManager.LoadScene("GameScene 1"); 
     }
     public void SpawnFruit()
     {
